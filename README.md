@@ -1,4 +1,4 @@
-# Bot-Template
+# Template de um bot para discord.js
 Apenas um "template" de um bot simples que já vem com um slash handler, event handler para precisar apenas criar novos comandos
 
 # **Como iniciar:**
