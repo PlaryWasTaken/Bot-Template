@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = (client) => {
+module.exports = (client) => { // Loads all slash commands and puts them in a collection - pt-br: Carrega todos os slash commands e os coloca em uma collection
     const command_folders = fs.readdirSync('./slash_commands/');
     for (const folder of command_folders) {
         const files = fs.readdirSync(`./slash_commands/${folder}`).filter(file => file.endsWith('.js'))
@@ -10,8 +10,6 @@ module.exports = (client) => {
             console.log(`[Loading Phase] Loading Command File ${file}...`)
             if (command.data.name) {
                 client.slash_commands.set(command.data.name, command);
-            } else {
-
             }
         }
     }

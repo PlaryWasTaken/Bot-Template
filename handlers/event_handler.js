@@ -7,9 +7,11 @@ module.exports = (client, Discord) => {
         for(const file of event_files) {
             const event = require(`../events/${dirs}/${file}`);
             const event_name = file.split('.')[0];
-            client.on(event_name, event.bind(null, Discord, client))
+            client.on(event_name, event.bind(null, client))
         }
     }
 
-    ['client', 'guild'].forEach(e => load_dir(e));
+    ['client'].forEach(e => load_dir(e));
+    // Load all events from the client folder if you want to load events from other folders, just add them to the array
+    // pt-br: Carrega todos os eventos da pasta client, se você quiser carregar eventos de outras pastas, apenas adicione-os ao array
 }
