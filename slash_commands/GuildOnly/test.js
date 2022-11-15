@@ -13,7 +13,8 @@ module.exports = {
         /*
            Adicionando uma opção do tipo string onde o user pode escolher entre opcões pre-definidas ou escrever o que quiser
            É possivel adicionar opcões do tipo: string, integer, boolean, user, channel, role, mentionable, number
-           Em todos os tipos de opções, é possivel tornar a opção obrigatória ou não */
+           Em todos os tipos de opções, é possivel tornar a opção obrigatória ou não
+        */
         /*
            en-us: Adding a string type option where the user can choose between predefined options or write whatever they want
               It is possible to add options of type: string, integer, boolean, user, channel, role, mentionable, number
@@ -21,7 +22,7 @@ module.exports = {
          */
 
     ,
-    async execute({interaction, client}) {
+    async execute({interaction}) {
         // Para pegar uma opcão do tipo string se utiliza o metodo getString() passando o nome da opcão como parametro
         // en-us: To get a string type option you use the getString() method passing the option name as a parameter
         const string = interaction.options.getString('string');
